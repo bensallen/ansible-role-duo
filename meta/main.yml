@@ -1,0 +1,10 @@
+galaxy_info:
+  author: Ben Allen
+  description: Install and configure Duo Security pam_duo module
+  company: Argonne National Laboratory
+  issue_tracker_url: http://gitlab.alcf.anl.gov/JLSE/ansible-role-duo
+  license: BSD
+  min_ansible_version: 2.0
+  galaxy_tags: []
+
+dependencies: []

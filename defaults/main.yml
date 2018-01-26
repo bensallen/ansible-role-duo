@@ -1,0 +1,23 @@
+---
+duo_pkgs:
+  - duo_unix
+duo_pkgs_state: installed
+
+duo_pam_duo_confs: []
+
+# duo_pam_duo_confs:
+#  - path: /etc/duo/pam_duo.conf
+#    ikey: 
+#    skey:
+#    host: api-XXXXXXXX.duosecurity.com
+#    groups:
+#    failmode: safe
+#    pushinfo: no
+#    http_proxy:
+#    autopush:
+#    motd: no
+#    prompts: 3
+#    accept_env_factor: no
+#    fallback_local_ip: no
+#    https_timeout: 0
+
