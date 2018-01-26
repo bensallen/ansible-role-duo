@@ -15,12 +15,8 @@ pushinfo = {{ item.pushinfo|default('no') }}
 http_proxy = {{ item.http_proxy|default('') }}
 ; Automatically push to users phone, skipping prompt
 autopush = {{ item.autopush|default('no') }}
-; Print /etc/motd
-motd = {{ item.motd|default('no') }}
 ; Number of tries allowed
 prompts = {{ item.prompts|default('3') }}
-; Accept the environment variable DUO_PASSCODE
-accept_env_factor = {{ item.accept_env_factor|default('no') }}
 ; Send the IP address of the server it is running on if no remote IP is passed to PAM
 fallback_local_ip = {{ item.fallback_local_ip|default('no') }}
 ; Seconds to wait for HTTPS responses from Duo

@@ -15,9 +15,7 @@ duo_pam_duo_confs: []
 #    pushinfo: no
 #    http_proxy:
 #    autopush:
-#    motd: no
 #    prompts: 3
-#    accept_env_factor: no
 #    fallback_local_ip: no
 #    https_timeout: 0
 
