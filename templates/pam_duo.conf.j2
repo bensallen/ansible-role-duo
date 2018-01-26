@@ -2,12 +2,13 @@
 {%   if value is defined %}
 {%     if value is sameas true %}
 {{ key }} = yes
-{%     elif value is sameas false %}
+{%-    elif value is sameas false %}
 {{ key }} = no
-{%     elif value is string or value is number %}
+{%-    elif value is string or value is number %}
 {{ key }} = {{ value }}
-{%   else %}
+{%-    else %}
 ; {{ key }} = 
+{%-    endif %}
 {%   endif %}
 {% endmacro %}
 [duo]
@@ -18,18 +19,18 @@
 ; API hostname
 {{ render_option("host", item.host) }}
 ; Group whitelist on which to enforce Duo authentication
-{{ render_option("groups", item.groups }}
+{{ render_option("groups", item.groups|default(None)) }}
 ; Fail safe (open) or secure (closed)
 {{ render_option("failmode", item.failmode|default('safe')) }}
 ; Send command to be executed
 {{ render_option("pushinfo", item.pushinfo|default('no')) }}
 ; Specify HTTP proxy
-{{ render_option("http_proxy", item.http_proxy }}
+{{ render_option("http_proxy", item.http_proxy|default(None)) }}
 ; Automatically push to users phone, skipping prompt
-{{ render_option("autopush", item.autopush|default('no') }}
+{{ render_option("autopush", item.autopush|default('no')) }}
 ; Number of tries allowed
-{{ render_option("prompts", item.prompts|default('no') }}
+{{ render_option("prompts", item.prompts|default('no')) }}
 ; Send the IP address of the server it is running on if no remote IP is passed to PAM
-{{ render_option("fallback_local_ip", item.fallback_local_ip|default('no') }}
+{{ render_option("fallback_local_ip", item.fallback_local_ip|default('no')) }}
 ; Seconds to wait for HTTPS responses from Duo
-{{ render_option("https_timeout", item.https_timeout|default(0) }}
+{{ render_option("https_timeout", item.https_timeout|default(0)) }}
