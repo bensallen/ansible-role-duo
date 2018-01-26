@@ -13,3 +13,4 @@
     src: pam_duo.conf.j2
     dest: "{{ item.path }}"
   with_items: "{{ duo_pam_duo_confs }}"
+  no_log: true
