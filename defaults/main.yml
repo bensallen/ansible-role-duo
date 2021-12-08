@@ -1,7 +1,5 @@
 ---
-duo_pkgs:
-  - duo_unix
-duo_pkgs_state: installed
+duo_pkgs_state: present
 
 duo_pam_duo_confs: []
 
